@@ -68,6 +68,9 @@
                             <constraint firstItem="iQo-Yo-h3R" firstAttribute="top" secondItem="IV4-To-B1K" secondAttribute="top" id="sPX-z9-v6o"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableMain" destination="iQo-Yo-h3R" id="Bvo-T5-ikE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zZ0-D7-oU4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
