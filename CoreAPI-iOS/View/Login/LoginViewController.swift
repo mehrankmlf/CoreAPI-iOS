@@ -27,6 +27,7 @@ class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setupNavigationBar()
         self.bindViewModel()
     }
     
@@ -41,6 +42,11 @@ class LoginViewController: UIViewController {
                 guard !String.isNilOrEmpty(string: data.token) else {return}
                 self?.pushToListViewController()
             }.store(in: &subscriber)
+    }
+    
+    private func setupNavigationBar() {
+        let backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        navigationItem.backBarButtonItem = backBarButtonItem
     }
 }
 

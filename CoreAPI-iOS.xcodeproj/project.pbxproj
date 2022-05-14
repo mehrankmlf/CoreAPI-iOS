@@ -38,6 +38,8 @@
 		02F9D87B282CE6C500E6D912 /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F9D87A282CE6C500E6D912 /* AppConfiguration.swift */; };
 		02F9D87E282D075B00E6D912 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F9D87D282D075B00E6D912 /* LoginRequest.swift */; };
 		02F9D880282D076A00E6D912 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F9D87F282D076A00E6D912 /* LoginResponse.swift */; };
+		A848869C282F95D700FBCF0D /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A848869B282F95D700FBCF0D /* BaseNavigationController.swift */; };
+		A8DE22B6282F691E006784E4 /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DE22B5282F691E006784E4 /* BaseResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +94,8 @@
 		02F9D87A282CE6C500E6D912 /* AppConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfiguration.swift; sourceTree = "<group>"; };
 		02F9D87D282D075B00E6D912 /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 		02F9D87F282D076A00E6D912 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
+		A848869B282F95D700FBCF0D /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		A8DE22B5282F691E006784E4 /* BaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,6 +226,7 @@
 		02F9D85C282CE10700E6D912 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A8DE22B4282F6904006784E4 /* BaseResponse */,
 				02F9D87C282D073800E6D912 /* LoginUseCase */,
 				0229E21D282E5F7E00C343B5 /* ListUsecase */,
 			);
@@ -258,6 +263,7 @@
 		02F9D86C282CE45F00E6D912 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				A848869A282F95B700FBCF0D /* Base */,
 				0229E222282E64DD00C343B5 /* ViewComponents */,
 				02F9D879282CE6B100E6D912 /* Protocols */,
 				02F9D871282CE52200E6D912 /* Extension */,
@@ -294,6 +300,22 @@
 				02F9D87F282D076A00E6D912 /* LoginResponse.swift */,
 			);
 			path = LoginUseCase;
+			sourceTree = "<group>";
+		};
+		A848869A282F95B700FBCF0D /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				A848869B282F95D700FBCF0D /* BaseNavigationController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		A8DE22B4282F6904006784E4 /* BaseResponse */ = {
+			isa = PBXGroup;
+			children = (
+				A8DE22B5282F691E006784E4 /* BaseResponse.swift */,
+			);
+			path = BaseResponse;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -449,6 +471,7 @@
 				0229E21C282E5F1600C343B5 /* ListViewModel.swift in Sources */,
 				0229E21A282E5E4A00C343B5 /* String + Extension.swift in Sources */,
 				02F9D878282CE68E00E6D912 /* BuildConfig.swift in Sources */,
+				A8DE22B6282F691E006784E4 /* BaseResponse.swift in Sources */,
 				02F9D861282CE15B00E6D912 /* CoreAPI.swift in Sources */,
 				02F9D875282CE5C900E6D912 /* AFError + Extension.swift in Sources */,
 				0229E221282E5FAA00C343B5 /* UsersListResponse.swift in Sources */,
@@ -456,6 +479,7 @@
 				02F9D873282CE54300E6D912 /* CoreAPI + Extension.swift in Sources */,
 				0229E212282E5D3800C343B5 /* UIViewController + Extension.swift in Sources */,
 				02F9D86E282CE46F00E6D912 /* Enums.swift in Sources */,
+				A848869C282F95D700FBCF0D /* BaseNavigationController.swift in Sources */,
 				02F9D868282CE1B400E6D912 /* Networking.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

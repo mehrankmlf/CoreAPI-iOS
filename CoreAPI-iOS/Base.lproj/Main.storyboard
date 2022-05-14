@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,11 +13,11 @@
             <objects>
                 <viewController storyboardIdentifier="LoginViewController" id="BYZ-38-t0r" customClass="LoginViewController" customModule="CoreAPI_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O11-Ws-m8u">
-                                <rect key="frame" x="100" y="430" width="214" height="36"/>
+                                <rect key="frame" x="100" y="315.5" width="175" height="36"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -51,21 +51,33 @@
             <objects>
                 <viewController storyboardIdentifier="ListViewController" id="OzN-J1-ddo" customClass="ListViewController" customModule="CoreAPI_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Zet-xP-7c2">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="iQo-Yo-h3R">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mxa-ig-Cdv">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="iQo-Yo-h3R">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </tableView>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </tableView>
+                                <constraints>
+                                    <constraint firstItem="iQo-Yo-h3R" firstAttribute="top" secondItem="mxa-ig-Cdv" secondAttribute="top" id="G20-QT-Z7e"/>
+                                    <constraint firstItem="iQo-Yo-h3R" firstAttribute="leading" secondItem="mxa-ig-Cdv" secondAttribute="leading" id="YdK-kB-j3e"/>
+                                    <constraint firstAttribute="trailing" secondItem="iQo-Yo-h3R" secondAttribute="trailing" id="eGc-GG-jJ7"/>
+                                    <constraint firstAttribute="bottom" secondItem="iQo-Yo-h3R" secondAttribute="bottom" id="xqB-It-ug2"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="IV4-To-B1K"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="IV4-To-B1K" firstAttribute="trailing" secondItem="iQo-Yo-h3R" secondAttribute="trailing" id="4kE-cw-aOu"/>
-                            <constraint firstItem="IV4-To-B1K" firstAttribute="bottom" secondItem="iQo-Yo-h3R" secondAttribute="bottom" id="HO5-Ug-PCf"/>
-                            <constraint firstItem="iQo-Yo-h3R" firstAttribute="leading" secondItem="IV4-To-B1K" secondAttribute="leading" id="hsV-1w-brE"/>
-                            <constraint firstItem="iQo-Yo-h3R" firstAttribute="top" secondItem="IV4-To-B1K" secondAttribute="top" id="sPX-z9-v6o"/>
+                            <constraint firstItem="IV4-To-B1K" firstAttribute="bottom" secondItem="mxa-ig-Cdv" secondAttribute="bottom" id="6Ai-ml-0RK"/>
+                            <constraint firstItem="mxa-ig-Cdv" firstAttribute="leading" secondItem="IV4-To-B1K" secondAttribute="leading" id="Wua-Vx-0c7"/>
+                            <constraint firstItem="mxa-ig-Cdv" firstAttribute="top" secondItem="IV4-To-B1K" secondAttribute="top" id="m2U-c9-4XO"/>
+                            <constraint firstItem="IV4-To-B1K" firstAttribute="trailing" secondItem="mxa-ig-Cdv" secondAttribute="trailing" id="oDx-xd-GRn"/>
                         </constraints>
                     </view>
                     <connections>

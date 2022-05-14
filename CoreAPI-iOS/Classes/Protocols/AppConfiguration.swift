@@ -14,7 +14,6 @@ import Combine
 protocol AppConfiguration {
     
     var baseURL : String { get }
-    
     var version : String { get }
     
     func isVPNConnected() -> Bool

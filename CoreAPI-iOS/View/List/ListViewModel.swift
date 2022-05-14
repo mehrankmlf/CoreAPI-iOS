@@ -10,7 +10,7 @@ import Combine
 
 class ListViewModel : ObservableObject {
     
-    @Published var data : UsersListResponse?
+    @Published var data : [UsersListResponse]?
     
     var getUserList: UsersListProtocol
     var subscriber = Set<AnyCancellable>()
@@ -25,10 +25,10 @@ extension ListViewModel {
         self.getUserList.getUserData()
             .receive(on: DispatchQueue.main)
             .sink { data in
-                print(data)
+
             } receiveValue: { [weak self] data in
                 guard let data = data else {return}
-                self?.data = data
+                self?.data = data.data
             }
             .store(in: &subscriber)
     }

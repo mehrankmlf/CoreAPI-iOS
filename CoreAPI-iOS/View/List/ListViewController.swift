@@ -12,12 +12,12 @@ class ListViewController: UIViewController {
     
     let cellId = "cellId"
     
-    private(set) var data : UsersListResponse? {
+    private var viewModel : ListViewModel
+    private(set) var data : [UsersListResponse]? {
         didSet {
             self.tableMain.reloadData()
         }
     }
-    private var viewModel : ListViewModel
     var subscriber = Set<AnyCancellable>()
     
     @IBOutlet weak var tableMain: UITableView!
@@ -36,6 +36,7 @@ class ListViewController: UIViewController {
         super.viewDidLoad()
         self.setupUI()
         self.viewModel.callUserListServie()
+        self.bindViewModel()
     }
     
     private func bindViewModel() {
@@ -47,29 +48,43 @@ class ListViewController: UIViewController {
     }
     
     private func setupUI() {
-        tableMain.register(UsersTableViewCell.self, forCellReuseIdentifier: cellId)
+        let nibCell = UINib(nibName: "UsersTableViewCell", bundle: nil)
+        tableMain.register(nibCell, forCellReuseIdentifier: cellId)
         self.renterTableView()
+        self.setupNavigationBar()
     }
     
     private func renterTableView() {
         self.tableMain.delegate = self
         self.tableMain.dataSource = self
     }
+    
+    private func setupNavigationBar() {
+        self.navigationItem.title = "UsersList"
+       
+    }
 }
 
 extension ListViewController : UITableViewDelegate, UITableViewDataSource {
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 75.0
+    }
+        
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.data?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! UsersTableViewCell
         
-        // set the text from the data model
-        
-        
+        guard let data = self.data else {return cell}
+        cell.setupParametrs(items: data[indexPath.row])
         return cell
     }
 }

@@ -14,16 +14,10 @@ class UsersTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-    }
-    
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-        
-        // Configure the view for the selected state
     }
     
     func setupParametrs(items : UsersListResponse) {
-        self.lblName.text = "items"
+        self.lblName.text = items.firstName
+        self.lblFamilyName.text = items.lastName
     }
 }
