@@ -1,6 +1,6 @@
 # CoreAPI-iOS
 
-This project Contains Alamofire API Manager Based on Protocol Oriented Concept with Combine Framework.
+This project Contains Alamofire Network layer Based on Protocol Oriented Concept and Combine Framework.
 
 It is created with UIKit, Alamofire, Combine.
 
