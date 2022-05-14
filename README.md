@@ -16,6 +16,14 @@ You don't need to install Anything manually, Alamofire will install  Automatical
 ## API
 - [REQRES API](https://reqres.in/) 
 
+## Requirements 
+- iOS 13.0+
+- Swift 5
+- Swift package manager
+
+## Libraries
+- Alamofire
+
 ## Contribution
 If you have anything to upgrade this project, feel free to contact me via email: `mehran.kmlf@icloud.com`.
 
