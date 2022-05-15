@@ -39,6 +39,9 @@
 		02F9D87E282D075B00E6D912 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F9D87D282D075B00E6D912 /* LoginRequest.swift */; };
 		02F9D880282D076A00E6D912 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F9D87F282D076A00E6D912 /* LoginResponse.swift */; };
 		A848869C282F95D700FBCF0D /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A848869B282F95D700FBCF0D /* BaseNavigationController.swift */; };
+		A89C22742830CAE700B3AD2D /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89C22732830CAE700B3AD2D /* LoadingView.swift */; };
+		A89C22782830CCDD00B3AD2D /* ViewModelBaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89C22772830CCDD00B3AD2D /* ViewModelBaseProtocol.swift */; };
+		A89C227A2830D4EC00B3AD2D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89C22792830D4EC00B3AD2D /* BaseViewController.swift */; };
 		A8DE22B6282F691E006784E4 /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DE22B5282F691E006784E4 /* BaseResponse.swift */; };
 /* End PBXBuildFile section */
 
@@ -95,6 +98,9 @@
 		02F9D87D282D075B00E6D912 /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 		02F9D87F282D076A00E6D912 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		A848869B282F95D700FBCF0D /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		A89C22732830CAE700B3AD2D /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		A89C22772830CCDD00B3AD2D /* ViewModelBaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelBaseProtocol.swift; sourceTree = "<group>"; };
+		A89C22792830D4EC00B3AD2D /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		A8DE22B5282F691E006784E4 /* BaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -154,8 +160,8 @@
 		0229E222282E64DD00C343B5 /* ViewComponents */ = {
 			isa = PBXGroup;
 			children = (
-				0229E223282E651700C343B5 /* UsersTableViewCell.swift */,
-				0229E224282E651700C343B5 /* UsersTableViewCell.xib */,
+				A89C22722830CAC600B3AD2D /* LoadingView */,
+				A89C22712830CAC000B3AD2D /* TableViewCell */,
 			);
 			path = ViewComponents;
 			sourceTree = "<group>";
@@ -289,6 +295,7 @@
 			isa = PBXGroup;
 			children = (
 				02F9D87A282CE6C500E6D912 /* AppConfiguration.swift */,
+				A89C22772830CCDD00B3AD2D /* ViewModelBaseProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -306,8 +313,26 @@
 			isa = PBXGroup;
 			children = (
 				A848869B282F95D700FBCF0D /* BaseNavigationController.swift */,
+				A89C22792830D4EC00B3AD2D /* BaseViewController.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		A89C22712830CAC000B3AD2D /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				0229E224282E651700C343B5 /* UsersTableViewCell.xib */,
+				0229E223282E651700C343B5 /* UsersTableViewCell.swift */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		A89C22722830CAC600B3AD2D /* LoadingView */ = {
+			isa = PBXGroup;
+			children = (
+				A89C22732830CAE700B3AD2D /* LoadingView.swift */,
+			);
+			path = LoadingView;
 			sourceTree = "<group>";
 		};
 		A8DE22B4282F6904006784E4 /* BaseResponse */ = {
@@ -461,18 +486,21 @@
 				02F9D870282CE4B900E6D912 /* MessageHelper.swift in Sources */,
 				02F9D87E282D075B00E6D912 /* LoginRequest.swift in Sources */,
 				0228BA36282E12C000B7008F /* LoginViewModel.swift in Sources */,
+				A89C227A2830D4EC00B3AD2D /* BaseViewController.swift in Sources */,
 				02F9D880282D076A00E6D912 /* LoginResponse.swift in Sources */,
 				0229E225282E651700C343B5 /* UsersTableViewCell.swift in Sources */,
 				02F9D87B282CE6C500E6D912 /* AppConfiguration.swift in Sources */,
 				02F9D82B282CDE1C00E6D912 /* AppDelegate.swift in Sources */,
 				02F9D863282CE17D00E6D912 /* TargerType.swift in Sources */,
 				0229E217282E5DC300C343B5 /* ListViewController.swift in Sources */,
+				A89C22742830CAE700B3AD2D /* LoadingView.swift in Sources */,
 				02F9D82D282CDE1C00E6D912 /* SceneDelegate.swift in Sources */,
 				0229E21C282E5F1600C343B5 /* ListViewModel.swift in Sources */,
 				0229E21A282E5E4A00C343B5 /* String + Extension.swift in Sources */,
 				02F9D878282CE68E00E6D912 /* BuildConfig.swift in Sources */,
 				A8DE22B6282F691E006784E4 /* BaseResponse.swift in Sources */,
 				02F9D861282CE15B00E6D912 /* CoreAPI.swift in Sources */,
+				A89C22782830CCDD00B3AD2D /* ViewModelBaseProtocol.swift in Sources */,
 				02F9D875282CE5C900E6D912 /* AFError + Extension.swift in Sources */,
 				0229E221282E5FAA00C343B5 /* UsersListResponse.swift in Sources */,
 				0228BA39282E185F00B7008F /* LoginViewController.swift in Sources */,

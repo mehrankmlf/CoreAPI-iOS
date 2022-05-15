@@ -8,12 +8,14 @@
 import Foundation
 import Combine
 
-class ListViewModel : ObservableObject {
+class ListViewModel : ObservableObject, ViewModelBaseProtocol {
     
+    private var getUserList: UsersListProtocol
+    
+    var loadinState = CurrentValueSubject<ViewModelStatus, Never>(.dismissAlert)
+    var subscriber = Set<AnyCancellable>()
     @Published var data : [UsersListResponse]?
     
-    var getUserList: UsersListProtocol
-    var subscriber = Set<AnyCancellable>()
     
     init(getUserList : UsersListProtocol = UserListRequest()) {
         self.getUserList = getUserList
@@ -22,10 +24,11 @@ class ListViewModel : ObservableObject {
 
 extension ListViewModel {
     func callUserListServie() {
+        self.loadinState.send(.loadStart)
         self.getUserList.getUserData()
             .receive(on: DispatchQueue.main)
             .sink { data in
-
+                self.loadinState.send(.dismissAlert)
             } receiveValue: { [weak self] data in
                 guard let data = data else {return}
                 self?.data = data.data

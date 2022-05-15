@@ -8,12 +8,13 @@
 import Foundation
 import Combine
 
-class LoginViewModel : ObservableObject {
+class LoginViewModel : ObservableObject, ViewModelBaseProtocol {
     
-   @Published var loginData : LoginResponse?
+    private var getTokenData: LoginProtocol
     
-    var getTokenData: LoginProtocol
+    var loadinState = CurrentValueSubject<ViewModelStatus, Never>(.dismissAlert)
     var subscriber = Set<AnyCancellable>()
+    @Published var loginData : LoginResponse?
     
     init(getTokenData : LoginProtocol = LoginRequest()) {
         self.getTokenData = getTokenData
@@ -22,10 +23,11 @@ class LoginViewModel : ObservableObject {
 
 extension LoginViewModel {
     func callLoginService(email : String, password : String) {
+        self.loadinState.send(.loadStart)
         self.getTokenData.loginService(email: email, password: password)
             .receive(on: DispatchQueue.main)
             .sink { data in
-                print(data)
+                self.loadinState.send(.dismissAlert)
             } receiveValue: { [weak self] data in
                 guard let data = data else {return}
                 self?.loginData = data

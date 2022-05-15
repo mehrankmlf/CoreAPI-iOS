@@ -7,6 +7,11 @@
 
 import UIKit
 
+enum ViewModelStatus : Equatable {
+    case loadStart
+    case dismissAlert
+}
+
 enum Storyboard: String {
 
     case main = "Main"

@@ -71,7 +71,6 @@ class LoadingView: UIView {
     }
 
     private func  setupConstraints() {
-        loadingStackView.pinEdges(to: self)
         NSLayoutConstraint.activate([
             loadingStackView.topAnchor.constraint(equalTo: topAnchor),
             loadingStackView.bottomAnchor.constraint(equalTo: bottomAnchor),

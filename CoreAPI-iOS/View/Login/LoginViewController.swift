@@ -8,7 +8,7 @@
 import UIKit
 import Combine
 
-class LoginViewController: UIViewController {
+class LoginViewController: BaseViewController {
     
     private var viewModel : LoginViewModel
     var subscriber = Set<AnyCancellable>()
@@ -22,12 +22,12 @@ class LoginViewController: UIViewController {
     
     required init?(coder aDecoder: NSCoder) {
         self.viewModel = LoginViewModel()
-            super.init(coder: aDecoder)
+        super.init(coder: aDecoder)
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setupNavigationBar()
+        self.setupUI()
         self.bindViewModel()
     }
     
@@ -42,6 +42,16 @@ class LoginViewController: UIViewController {
                 guard !String.isNilOrEmpty(string: data.token) else {return}
                 self?.pushToListViewController()
             }.store(in: &subscriber)
+        
+        self.viewModel.loadinState
+            .sink { [weak self] state in
+                self?.handleActivityIndicator(state: state)
+            }
+            .store(in: &subscriber)
+    }
+    
+    private func setupUI() {
+        self.setupNavigationBar()
     }
     
     private func setupNavigationBar() {
@@ -54,5 +64,16 @@ extension LoginViewController {
     private func pushToListViewController() {
         let vc = Storyboard.main.instantiate(ListViewController.self)
         self.navigationController?.pushViewController(vc, animated: true)
+    }
+}
+
+extension LoginViewController {
+    private func handleActivityIndicator(state : ViewModelStatus) {
+        switch state {
+        case .loadStart:
+            self.showActivityIndicator(uiView: view)
+        case .dismissAlert:
+            self.hideActivityIndicator(uiView: view)
+        }
     }
 }
