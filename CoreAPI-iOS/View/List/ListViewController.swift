@@ -12,15 +12,29 @@ class ListViewController: BaseViewController {
     
     let cellId = "cellId"
     
-    private var viewModel : ListViewModel
+    private var viewModel : ListViewModel?
     private(set) var data : [UsersListResponse]? {
         didSet {
-            self.tableMain.reloadData()
+            self.tableView.reloadData()
         }
     }
     var subscriber = Set<AnyCancellable>()
     
-    @IBOutlet weak var tableMain: UITableView!
+    private lazy var viewContainer : UIView = {
+        let viewContainer = UIView()
+        viewContainer.backgroundColor = .white
+        viewContainer.translatesAutoresizingMaskIntoConstraints = false
+        return viewContainer
+    }()
+    
+    private lazy var tableView: UITableView = {
+        let tableView = UITableView(frame: .zero, style: .plain)
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.backgroundColor = .clear
+        tableView.delegate = self
+        tableView.dataSource = self
+        return tableView
+    }()
     
     init(viewModel : ListViewModel) {
         self.viewModel = viewModel
@@ -28,26 +42,25 @@ class ListViewController: BaseViewController {
     }
     
     required init?(coder aDecoder: NSCoder) {
-        self.viewModel = ListViewModel()
         super.init(coder: aDecoder)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupUI()
-        self.viewModel.callUserListServie()
+        self.viewModel?.callUserListServie()
         self.bindViewModel()
     }
     
     private func bindViewModel() {
         
-        self.viewModel.$data
+        self.viewModel?.$data
             .compactMap({ $0 })
             .sink { [weak self] data in
                 self?.data = data
             }.store(in: &subscriber)
         
-        self.viewModel.loadinState
+        self.viewModel?.loadinState
             .sink { [weak self] state in
                 self?.handleActivityIndicator(state: state)
             }
@@ -55,20 +68,17 @@ class ListViewController: BaseViewController {
     }
     
     private func setupUI() {
-        let nibCell = UINib(nibName: "UsersTableViewCell", bundle: nil)
-        tableMain.register(nibCell, forCellReuseIdentifier: cellId)
-        self.renterTableView()
+        tableView.register(UsersTableViewCell.self, forCellReuseIdentifier: cellId)
         self.setupNavigationBar()
-    }
-    
-    private func renterTableView() {
-        self.tableMain.delegate = self
-        self.tableMain.dataSource = self
+        let elements = [viewContainer, tableView]
+        for element in elements {
+            view.addSubview(element)
+        }
+        self.setupAutoLayout()
     }
     
     private func setupNavigationBar() {
         self.navigationItem.title = "UsersList"
-        
     }
 }
 
@@ -104,5 +114,20 @@ extension ListViewController {
         case .dismissAlert:
             self.hideActivityIndicator(uiView: view)
         }
+    }
+}
+
+extension ListViewController {
+    private func setupAutoLayout() {
+        
+        viewContainer.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
+        viewContainer.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
+        viewContainer.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor).isActive = true
+        viewContainer.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor).isActive = true
+        
+        tableView.topAnchor.constraint(equalTo: viewContainer.topAnchor).isActive = true
+        tableView.bottomAnchor.constraint(equalTo: viewContainer.bottomAnchor).isActive = true
+        tableView.leftAnchor.constraint(equalTo: viewContainer.leftAnchor).isActive = true
+        tableView.rightAnchor.constraint(equalTo: viewContainer.rightAnchor).isActive = true
     }
 }

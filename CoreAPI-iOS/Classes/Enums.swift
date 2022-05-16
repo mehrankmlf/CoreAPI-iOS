@@ -12,18 +12,6 @@ enum ViewModelStatus : Equatable {
     case dismissAlert
 }
 
-enum Storyboard: String {
-
-    case main = "Main"
-
-    func instantiate<VC: UIViewController>(_ viewController: VC.Type) -> VC {
-        guard let vc = UIStoryboard(name: self.rawValue, bundle: nil).instantiateViewController(withIdentifier: VC.storyboardIdentifier) as? VC
-            else { fatalError("Couldn't instantiate \(VC.storyboardIdentifier) from \(self.rawValue)") }
-        return vc
-    }
-}
-
-
 enum APIError : Error {
     case general
     case timeout
