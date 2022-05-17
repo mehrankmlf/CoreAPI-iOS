@@ -39,10 +39,15 @@ class UsersTableViewCell: UITableViewCell {
         stackView.axis  = .vertical
         stackView.distribution  = .fillEqually
         stackView.alignment = .fill
-        stackView.spacing = 10
+        stackView.spacing = 5
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
     }()
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        // Clear all content based views and their actions here
+    }
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -64,10 +69,11 @@ class UsersTableViewCell: UITableViewCell {
 
 extension UsersTableViewCell {
     private func setupAutoLayout() {
-        containerView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 5).isActive = true
-        containerView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: 5).isActive = true
+        
+        containerView.heightAnchor.constraint(equalToConstant: 60).isActive = true
         containerView.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 5).isActive = true
         containerView.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -5).isActive = true
+        containerView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor).isActive = true
 
         statsView.centerYAnchor.constraint(equalTo: containerView.centerYAnchor).isActive = true
         statsView.leftAnchor.constraint(equalTo: containerView.leftAnchor, constant: 20).isActive = true

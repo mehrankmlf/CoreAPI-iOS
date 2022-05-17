@@ -28,9 +28,11 @@ class ListViewController: BaseViewController {
     }()
     
     private lazy var tableView: UITableView = {
-        let tableView = UITableView(frame: .zero, style: .plain)
+        let tableView = UITableView(frame: UIScreen.main.bounds, style: .plain)
+        tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
+        tableView.frame = self.view.frame
         tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.backgroundColor = .clear
+        tableView.backgroundColor = .white
         tableView.delegate = self
         tableView.dataSource = self
         return tableView
@@ -85,7 +87,7 @@ class ListViewController: BaseViewController {
 extension ListViewController : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 75.0
+        return 70
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
