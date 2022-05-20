@@ -36,7 +36,7 @@ class LoginViewController: BaseViewController {
         btnLogin.layer.cornerRadius = 15
         btnLogin.clipsToBounds = true
         btnLogin.translatesAutoresizingMaskIntoConstraints = false
-        btnLogin.addTarget(self, action: #selector(loginButton), for: .touchUpInside)
+        btnLogin.addTarget(self, action: #selector(loginButton_Clicked), for: .touchUpInside)
         return btnLogin
     }()
     
@@ -84,7 +84,7 @@ class LoginViewController: BaseViewController {
         navigationItem.backBarButtonItem = backBarButtonItem
     }
     
-    @objc func loginButton() {
+    @objc func loginButton_Clicked() {
         self.viewModel?.callLoginService(email: "eve.holt@reqres.in", password: "cityslicka")
     }
 }
@@ -110,19 +110,19 @@ extension LoginViewController {
 extension LoginViewController {
     private func setupAutoLayout() {
         viewContainer.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
-        viewContainer.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
         viewContainer.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor).isActive = true
         viewContainer.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor).isActive = true
+        viewContainer.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
         
-        imageAvatar.topAnchor.constraint(equalTo: viewContainer.topAnchor, constant: 20).isActive = true
-        imageAvatar.centerXAnchor.constraint(equalTo: viewContainer.centerXAnchor).isActive = true
-        imageAvatar.heightAnchor.constraint(equalToConstant: 100).isActive = true
         imageAvatar.widthAnchor.constraint(equalToConstant: 100).isActive = true
+        imageAvatar.heightAnchor.constraint(equalToConstant: 100).isActive = true
+        imageAvatar.centerXAnchor.constraint(equalTo: viewContainer.centerXAnchor).isActive = true
+        imageAvatar.topAnchor.constraint(equalTo: viewContainer.topAnchor, constant: 20).isActive = true
         
-        btnLogin.topAnchor.constraint(equalTo: imageAvatar.bottomAnchor, constant: 40).isActive = true
+        btnLogin.heightAnchor.constraint(equalToConstant: 40).isActive = true
         btnLogin.centerXAnchor.constraint(equalTo: imageAvatar.centerXAnchor).isActive = true
+        btnLogin.topAnchor.constraint(equalTo: imageAvatar.bottomAnchor, constant: 40).isActive = true
         btnLogin.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor, constant: 50).isActive = true
         btnLogin.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor, constant: -50).isActive = true
-        btnLogin.heightAnchor.constraint(equalToConstant: 40).isActive = true
     }
 }

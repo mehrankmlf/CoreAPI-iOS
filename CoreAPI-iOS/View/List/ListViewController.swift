@@ -31,10 +31,10 @@ class ListViewController: BaseViewController {
         let tableView = UITableView(frame: UIScreen.main.bounds, style: .plain)
         tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
         tableView.frame = self.view.frame
-        tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.backgroundColor = .white
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.translatesAutoresizingMaskIntoConstraints = false
         return tableView
     }()
     
@@ -99,9 +99,7 @@ extension ListViewController : UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! UsersTableViewCell
-        
         guard let data = self.data else {return cell}
         cell.setupParametrs(items: data[indexPath.row])
         return cell
@@ -121,15 +119,14 @@ extension ListViewController {
 
 extension ListViewController {
     private func setupAutoLayout() {
-        
         viewContainer.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
-        viewContainer.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
         viewContainer.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor).isActive = true
         viewContainer.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor).isActive = true
+        viewContainer.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
         
         tableView.topAnchor.constraint(equalTo: viewContainer.topAnchor).isActive = true
-        tableView.bottomAnchor.constraint(equalTo: viewContainer.bottomAnchor).isActive = true
         tableView.leftAnchor.constraint(equalTo: viewContainer.leftAnchor).isActive = true
         tableView.rightAnchor.constraint(equalTo: viewContainer.rightAnchor).isActive = true
+        tableView.bottomAnchor.constraint(equalTo: viewContainer.bottomAnchor).isActive = true
     }
 }

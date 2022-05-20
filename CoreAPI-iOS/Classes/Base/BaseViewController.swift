@@ -12,7 +12,9 @@ class BaseViewController: UIViewController {
     var container: UIView = UIView()
     var loadingView: UIView = UIView()
     var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
-    
+}
+
+extension BaseViewController {
     /*
         Show customized activity indicator,
         actually add activity indicator to passing view
@@ -63,5 +65,4 @@ class BaseViewController: UIViewController {
         let blue = CGFloat(rgbValue & 0xFF)/256.0
         return UIColor(red:red, green:green, blue:blue, alpha:CGFloat(alpha))
     }
-    
 }

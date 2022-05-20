@@ -13,25 +13,25 @@ class UsersTableViewCell: UITableViewCell {
         let view = UIView()
         view.backgroundColor = #colorLiteral(red: 0.1403488219, green: 0.1641628742, blue: 0.1974385381, alpha: 1)
         view.layer.cornerRadius = 10
-        view.translatesAutoresizingMaskIntoConstraints = false
         view.clipsToBounds = true
+        view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     
     private lazy var lblName : UILabel = {
-        let lblTop = UILabel()
-        lblTop.textColor = UIColor.white
-        lblTop.font = UIFont.boldSystemFont(ofSize: 17)
-        lblTop.translatesAutoresizingMaskIntoConstraints = false
-        return lblTop
+        let lblName = UILabel()
+        lblName.textColor = UIColor.white
+        lblName.font = UIFont.boldSystemFont(ofSize: 17)
+        lblName.translatesAutoresizingMaskIntoConstraints = false
+        return lblName
     }()
     
     private lazy var lblFamilyName : UILabel = {
-        let lblTop = UILabel()
-        lblTop.textColor = UIColor.white
-        lblTop.font = UIFont.boldSystemFont(ofSize: 17)
-        lblTop.translatesAutoresizingMaskIntoConstraints = false
-        return lblTop
+        let lblFamilyName = UILabel()
+        lblFamilyName.textColor = UIColor.white
+        lblFamilyName.font = UIFont.boldSystemFont(ofSize: 17)
+        lblFamilyName.translatesAutoresizingMaskIntoConstraints = false
+        return lblFamilyName
     }()
     
     private lazy var statsView: UIStackView = {
