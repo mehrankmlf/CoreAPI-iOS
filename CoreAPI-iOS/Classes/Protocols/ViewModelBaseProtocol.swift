@@ -14,3 +14,20 @@ protocol ViewModelBaseProtocol {
     var loadinState : CurrentValueSubject<ViewModelStatus, Never> { get set }
     var subscriber : Set<AnyCancellable> { get }
 }
+
+
+//LoginViewModel
+typealias loginViewModel = ViewModelBaseProtocol & LoginViewModelBaseProtocol
+
+protocol LoginViewModelBaseProtocol {
+    func callLoginService(email : String, password : String)
+}
+
+//ListViewModel
+typealias listViewModel = ViewModelBaseProtocol & ListViewModelBaseProtocol
+
+protocol ListViewModelBaseProtocol {
+    func callUserListServie()
+}
+
+

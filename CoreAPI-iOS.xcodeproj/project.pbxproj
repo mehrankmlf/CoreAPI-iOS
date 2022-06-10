@@ -15,11 +15,15 @@
 		0229E21F282E5F9D00C343B5 /* UsersListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0229E21E282E5F9D00C343B5 /* UsersListRequest.swift */; };
 		0229E221282E5FAA00C343B5 /* UsersListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0229E220282E5FAA00C343B5 /* UsersListResponse.swift */; };
 		0229E225282E651700C343B5 /* UsersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0229E223282E651700C343B5 /* UsersTableViewCell.swift */; };
+		022E1F3E2853315C00CF04F9 /* LoginResponseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022E1F3D2853315C00CF04F9 /* LoginResponseTest.swift */; };
+		022E1F41285334BF00CF04F9 /* ListResponseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022E1F40285334BF00CF04F9 /* ListResponseTest.swift */; };
+		022E1F432853364500CF04F9 /* LoginViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022E1F422853364500CF04F9 /* LoginViewModelTest.swift */; };
+		022E1F4828534E9200CF04F9 /* MockServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022E1F4628534E9200CF04F9 /* MockServices.swift */; };
+		022E1F4A2853535600CF04F9 /* ListViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022E1F492853535600CF04F9 /* ListViewModelTest.swift */; };
 		02F9D82B282CDE1C00E6D912 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F9D82A282CDE1C00E6D912 /* AppDelegate.swift */; };
 		02F9D82D282CDE1C00E6D912 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F9D82C282CDE1C00E6D912 /* SceneDelegate.swift */; };
 		02F9D834282CDE1D00E6D912 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02F9D833282CDE1D00E6D912 /* Assets.xcassets */; };
 		02F9D837282CDE1D00E6D912 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02F9D835282CDE1D00E6D912 /* LaunchScreen.storyboard */; };
-		02F9D842282CDE1D00E6D912 /* CoreAPI_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F9D841282CDE1D00E6D912 /* CoreAPI_iOSTests.swift */; };
 		02F9D84C282CDE1D00E6D912 /* CoreAPI_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F9D84B282CDE1D00E6D912 /* CoreAPI_iOSUITests.swift */; };
 		02F9D84E282CDE1D00E6D912 /* CoreAPI_iOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F9D84D282CDE1D00E6D912 /* CoreAPI_iOSUITestsLaunchTests.swift */; };
 		02F9D861282CE15B00E6D912 /* CoreAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F9D860282CE15B00E6D912 /* CoreAPI.swift */; };
@@ -67,6 +71,11 @@
 		0229E21E282E5F9D00C343B5 /* UsersListRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListRequest.swift; sourceTree = "<group>"; };
 		0229E220282E5FAA00C343B5 /* UsersListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListResponse.swift; sourceTree = "<group>"; };
 		0229E223282E651700C343B5 /* UsersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTableViewCell.swift; sourceTree = "<group>"; };
+		022E1F3D2853315C00CF04F9 /* LoginResponseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponseTest.swift; sourceTree = "<group>"; };
+		022E1F40285334BF00CF04F9 /* ListResponseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListResponseTest.swift; sourceTree = "<group>"; };
+		022E1F422853364500CF04F9 /* LoginViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelTest.swift; sourceTree = "<group>"; };
+		022E1F4628534E9200CF04F9 /* MockServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockServices.swift; sourceTree = "<group>"; };
+		022E1F492853535600CF04F9 /* ListViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModelTest.swift; sourceTree = "<group>"; };
 		02F9D827282CDE1C00E6D912 /* CoreAPI-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CoreAPI-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		02F9D82A282CDE1C00E6D912 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		02F9D82C282CDE1C00E6D912 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -74,7 +83,6 @@
 		02F9D836282CDE1D00E6D912 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		02F9D838282CDE1D00E6D912 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		02F9D83D282CDE1D00E6D912 /* CoreAPI-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CoreAPI-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		02F9D841282CDE1D00E6D912 /* CoreAPI_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreAPI_iOSTests.swift; sourceTree = "<group>"; };
 		02F9D847282CDE1D00E6D912 /* CoreAPI-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CoreAPI-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		02F9D84B282CDE1D00E6D912 /* CoreAPI_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreAPI_iOSUITests.swift; sourceTree = "<group>"; };
 		02F9D84D282CDE1D00E6D912 /* CoreAPI_iOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreAPI_iOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -157,6 +165,32 @@
 			path = ViewComponents;
 			sourceTree = "<group>";
 		};
+		022E1EF02853061100CF04F9 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				022E1F4628534E9200CF04F9 /* MockServices.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		022E1EF12853062000CF04F9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				022E1F422853364500CF04F9 /* LoginViewModelTest.swift */,
+				022E1F492853535600CF04F9 /* ListViewModelTest.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		022E1F3428532F5C00CF04F9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				022E1F3D2853315C00CF04F9 /* LoginResponseTest.swift */,
+				022E1F40285334BF00CF04F9 /* ListResponseTest.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		02F9D81E282CDE1C00E6D912 = {
 			isa = PBXGroup;
 			children = (
@@ -196,7 +230,9 @@
 		02F9D840282CDE1D00E6D912 /* CoreAPI-iOSTests */ = {
 			isa = PBXGroup;
 			children = (
-				02F9D841282CDE1D00E6D912 /* CoreAPI_iOSTests.swift */,
+				022E1F3428532F5C00CF04F9 /* Model */,
+				022E1EF12853062000CF04F9 /* ViewModel */,
+				022E1EF02853061100CF04F9 /* Mock */,
 			);
 			path = "CoreAPI-iOSTests";
 			sourceTree = "<group>";
@@ -397,6 +433,7 @@
 					};
 					02F9D83C282CDE1D00E6D912 = {
 						CreatedOnToolsVersion = 13.3;
+						LastSwiftMigration = 1330;
 						TestTargetID = 02F9D826282CDE1C00E6D912;
 					};
 					02F9D846282CDE1D00E6D912 = {
@@ -492,7 +529,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02F9D842282CDE1D00E6D912 /* CoreAPI_iOSTests.swift in Sources */,
+				022E1F41285334BF00CF04F9 /* ListResponseTest.swift in Sources */,
+				022E1F4A2853535600CF04F9 /* ListViewModelTest.swift in Sources */,
+				022E1F4828534E9200CF04F9 /* MockServices.swift in Sources */,
+				022E1F432853364500CF04F9 /* LoginViewModelTest.swift in Sources */,
+				022E1F3E2853315C00CF04F9 /* LoginResponseTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -668,6 +709,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "gravityapp.CoreAPI-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -695,6 +737,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "gravityapp.CoreAPI-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -705,15 +748,23 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3KZWVBAJSN;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "gravityapp.CoreAPI-iOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CoreAPI-iOS.app/CoreAPI-iOS";
@@ -725,15 +776,22 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3KZWVBAJSN;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "gravityapp.CoreAPI-iOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CoreAPI-iOS.app/CoreAPI-iOS";

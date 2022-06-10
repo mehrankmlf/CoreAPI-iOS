@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-class ListViewModel : ObservableObject, ViewModelBaseProtocol {
+class ListViewModel : ObservableObject, listViewModel {
     
     private var getUserList: UsersListProtocol
     

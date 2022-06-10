@@ -8,15 +8,15 @@
 import Foundation
 import Combine
 
-class LoginViewModel : ObservableObject, ViewModelBaseProtocol {
+class LoginViewModel : ObservableObject, loginViewModel {
     
-    private var getTokenData: LoginProtocol
+    private var getTokenData: LoginServiceProtocol
     
     var loadinState = CurrentValueSubject<ViewModelStatus, Never>(.dismissAlert)
     var subscriber = Set<AnyCancellable>()
     @Published var loginData : LoginResponse?
     
-    init(getTokenData : LoginProtocol = LoginRequest()) {
+    init(getTokenData : LoginServiceProtocol = LoginRequest()) {
         self.getTokenData = getTokenData
     }
 }
