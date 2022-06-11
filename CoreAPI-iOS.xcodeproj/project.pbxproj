@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02194FE52854F9B4002554C9 /* EndPointTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02194FE42854F9B4002554C9 /* EndPointTest.swift */; };
+		02194FE72854FA67002554C9 /* MockEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02194FE62854FA67002554C9 /* MockEndPoint.swift */; };
 		0228BA36282E12C000B7008F /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0228BA35282E12C000B7008F /* LoginViewModel.swift */; };
 		0228BA39282E185F00B7008F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0228BA38282E185F00B7008F /* LoginViewController.swift */; };
 		0229E217282E5DC300C343B5 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0229E216282E5DC300C343B5 /* ListViewController.swift */; };
@@ -63,6 +65,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		02194FE42854F9B4002554C9 /* EndPointTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointTest.swift; sourceTree = "<group>"; };
+		02194FE62854FA67002554C9 /* MockEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockEndPoint.swift; sourceTree = "<group>"; };
 		0228BA35282E12C000B7008F /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		0228BA38282E185F00B7008F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		0229E216282E5DC300C343B5 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
@@ -130,6 +134,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		02194FE12854F953002554C9 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				02194FE42854F9B4002554C9 /* EndPointTest.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		0228BA37282E184000B7008F /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -169,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				022E1F4628534E9200CF04F9 /* MockServices.swift */,
+				02194FE62854FA67002554C9 /* MockEndPoint.swift */,
 			);
 			path = Mock;
 			sourceTree = "<group>";
@@ -230,6 +243,7 @@
 		02F9D840282CDE1D00E6D912 /* CoreAPI-iOSTests */ = {
 			isa = PBXGroup;
 			children = (
+				02194FE12854F953002554C9 /* Networking */,
 				022E1F3428532F5C00CF04F9 /* Model */,
 				022E1EF12853062000CF04F9 /* ViewModel */,
 				022E1EF02853061100CF04F9 /* Mock */,
@@ -529,10 +543,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02194FE52854F9B4002554C9 /* EndPointTest.swift in Sources */,
 				022E1F41285334BF00CF04F9 /* ListResponseTest.swift in Sources */,
 				022E1F4A2853535600CF04F9 /* ListViewModelTest.swift in Sources */,
 				022E1F4828534E9200CF04F9 /* MockServices.swift in Sources */,
 				022E1F432853364500CF04F9 /* LoginViewModelTest.swift in Sources */,
+				02194FE72854FA67002554C9 /* MockEndPoint.swift in Sources */,
 				022E1F3E2853315C00CF04F9 /* LoginResponseTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
