@@ -36,10 +36,10 @@ class EndPointTest: XCTestCase {
     }
     
     func testTargetType_WhenVersion_ShouldReturnVersion() {
-        XCTAssertEqual(endPoint.baseURL, "v0")
+        XCTAssertEqual(endPoint.version, "v1")
     }
     
     func testTargetType_WhenPath_ShouldReturnString() {
-        XCTAssertTrue(endPoint.path as Any is String)
+        XCTAssertTrue(endPoint.path as Any is RequestType)
     }
 }
