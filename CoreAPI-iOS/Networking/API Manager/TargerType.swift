@@ -17,7 +17,7 @@ enum HTTPMethod: String {
     case delete = "DELETE"
 }
 
-enum RequestType {
+enum RequestType : Equatable {
     /// A request with no additional data.
     case requestPath(path : String)
     /// A request with query param

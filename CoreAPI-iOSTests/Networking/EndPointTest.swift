@@ -39,7 +39,21 @@ class EndPointTest: XCTestCase {
         XCTAssertEqual(endPoint.version, "v1")
     }
     
-    func testTargetType_WhenPath_ShouldReturnString() {
+    func testTargetType_WhenPath_ShouldBeRequestType() {
         XCTAssertTrue(endPoint.path as Any is RequestType)
+    }
+    
+    func testTargetType_WhenPath_ShouldReturnPath() {
+        let endPoint = endPoint
+        XCTAssertEqual(endPoint?.path, .requestPath(path: "test"))
+    }
+
+    func testTargetType_WhenMethod_ShouldReturnPost() {
+        let endPoint = endPoint
+        XCTAssertEqual(endPoint?.method, .post)
+    }
+    
+    func testTargetType_WhenHeader_ShouldReturnDict() {
+        XCTAssertEqual(endPoint.headers, ["header": "header"])
     }
 }
