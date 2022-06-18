@@ -37,11 +37,6 @@ class BaseAPI<T: TargetType> {
             self?.session.request(url, method: method, parameters: params.0, encoding: params.1, headers: headers, requestModifier: { $0.timeoutInterval = 20 })
                 .validate(statusCode: 200..<300)
                 .responseDecodable(of: M.self) { response in
-                
-                    if response.response?.statusCode == HTTPStatusCode.unauthorized.rawValue {
-                        promise(.failure(.serverError))
-                        return
-                    }
                     
                     switch response.result {
                         
