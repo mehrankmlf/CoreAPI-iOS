@@ -43,6 +43,9 @@
 		02F9D87B282CE6C500E6D912 /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F9D87A282CE6C500E6D912 /* AppConfiguration.swift */; };
 		02F9D87E282D075B00E6D912 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F9D87D282D075B00E6D912 /* LoginRequest.swift */; };
 		02F9D880282D076A00E6D912 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F9D87F282D076A00E6D912 /* LoginResponse.swift */; };
+		A82CBF4E286C2EE00036FD42 /* sni.cloudflaressl.com.cer in Resources */ = {isa = PBXBuildFile; fileRef = A82CBF4D286C2EE00036FD42 /* sni.cloudflaressl.com.cer */; };
+		A82CBF51286C2F750036FD42 /* CustomSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82CBF50286C2F750036FD42 /* CustomSession.swift */; };
+		A82CBF53286C30950036FD42 /* Certificates.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82CBF52286C30950036FD42 /* Certificates.swift */; };
 		A848869C282F95D700FBCF0D /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A848869B282F95D700FBCF0D /* BaseNavigationController.swift */; };
 		A89C22782830CCDD00B3AD2D /* ViewModelBaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89C22772830CCDD00B3AD2D /* ViewModelBaseProtocol.swift */; };
 		A89C227A2830D4EC00B3AD2D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89C22792830D4EC00B3AD2D /* BaseViewController.swift */; };
@@ -106,6 +109,9 @@
 		02F9D87A282CE6C500E6D912 /* AppConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfiguration.swift; sourceTree = "<group>"; };
 		02F9D87D282D075B00E6D912 /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 		02F9D87F282D076A00E6D912 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
+		A82CBF4D286C2EE00036FD42 /* sni.cloudflaressl.com.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = sni.cloudflaressl.com.cer; sourceTree = "<group>"; };
+		A82CBF50286C2F750036FD42 /* CustomSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSession.swift; sourceTree = "<group>"; };
+		A82CBF52286C30950036FD42 /* Certificates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Certificates.swift; sourceTree = "<group>"; };
 		A848869B282F95D700FBCF0D /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		A89C22772830CCDD00B3AD2D /* ViewModelBaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelBaseProtocol.swift; sourceTree = "<group>"; };
 		A89C22792830D4EC00B3AD2D /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -304,6 +310,7 @@
 		02F9D85E282CE11700E6D912 /* API Manager */ = {
 			isa = PBXGroup;
 			children = (
+				A82CBF4F286C2F660036FD42 /* CustomSessionDelegate */,
 				02F9D860282CE15B00E6D912 /* CoreAPI.swift */,
 				02F9D862282CE17D00E6D912 /* TargerType.swift */,
 				02F9D864282CE19000E6D912 /* AlamofireLogger.swift */,
@@ -323,6 +330,7 @@
 		02F9D86C282CE45F00E6D912 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				A82CBF4C286C2EBB0036FD42 /* Certificate */,
 				A848869A282F95B700FBCF0D /* Base */,
 				0229E222282E64DD00C343B5 /* ViewComponents */,
 				02F9D879282CE6B100E6D912 /* Protocols */,
@@ -360,6 +368,23 @@
 				02F9D87F282D076A00E6D912 /* LoginResponse.swift */,
 			);
 			path = LoginUseCase;
+			sourceTree = "<group>";
+		};
+		A82CBF4C286C2EBB0036FD42 /* Certificate */ = {
+			isa = PBXGroup;
+			children = (
+				A82CBF4D286C2EE00036FD42 /* sni.cloudflaressl.com.cer */,
+				A82CBF52286C30950036FD42 /* Certificates.swift */,
+			);
+			path = Certificate;
+			sourceTree = "<group>";
+		};
+		A82CBF4F286C2F660036FD42 /* CustomSessionDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				A82CBF50286C2F750036FD42 /* CustomSession.swift */,
+			);
+			path = CustomSessionDelegate;
 			sourceTree = "<group>";
 		};
 		A848869A282F95B700FBCF0D /* Base */ = {
@@ -499,6 +524,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				02F9D837282CDE1D00E6D912 /* LaunchScreen.storyboard in Resources */,
+				A82CBF4E286C2EE00036FD42 /* sni.cloudflaressl.com.cer in Resources */,
 				02F9D834282CDE1D00E6D912 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -532,6 +558,7 @@
 				A89C227A2830D4EC00B3AD2D /* BaseViewController.swift in Sources */,
 				02F9D880282D076A00E6D912 /* LoginResponse.swift in Sources */,
 				0229E225282E651700C343B5 /* UsersTableViewCell.swift in Sources */,
+				A82CBF51286C2F750036FD42 /* CustomSession.swift in Sources */,
 				02F9D87B282CE6C500E6D912 /* AppConfiguration.swift in Sources */,
 				02F9D82B282CDE1C00E6D912 /* AppDelegate.swift in Sources */,
 				02F9D863282CE17D00E6D912 /* TargerType.swift in Sources */,
@@ -542,6 +569,7 @@
 				02F9D878282CE68E00E6D912 /* BuildConfig.swift in Sources */,
 				A8DE22B6282F691E006784E4 /* BaseResponse.swift in Sources */,
 				02F9D861282CE15B00E6D912 /* CoreAPI.swift in Sources */,
+				A82CBF53286C30950036FD42 /* Certificates.swift in Sources */,
 				A89C22782830CCDD00B3AD2D /* ViewModelBaseProtocol.swift in Sources */,
 				02F9D875282CE5C900E6D912 /* AFError + Extension.swift in Sources */,
 				0229E221282E5FAA00C343B5 /* UsersListResponse.swift in Sources */,
