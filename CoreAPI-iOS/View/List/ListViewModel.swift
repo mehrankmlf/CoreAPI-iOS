@@ -10,12 +10,13 @@ import Combine
 
 class ListViewModel : ObservableObject, listViewModel {
     
-    private var getUserList: UsersListProtocol
+    let cellId = "cellId"
+    let title = "UsersList"
     
+    private var getUserList: UsersListProtocol
     var loadinState = CurrentValueSubject<ViewModelStatus, Never>(.dismissAlert)
     var subscriber = Set<AnyCancellable>()
     @Published var data : [UsersListResponse]?
-    
     
     init(getUserList : UsersListProtocol = UserListRequest()) {
         self.getUserList = getUserList

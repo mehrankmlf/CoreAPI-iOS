@@ -9,10 +9,8 @@ import UIKit
 import Combine
 
 class ListViewController: BaseViewController {
-    
-    let cellId = "cellId"
-    
-    private var viewModel : ListViewModel?
+
+    private var viewModel : ListViewModel!
     private(set) var data : [UsersListResponse]? {
         didSet {
             self.tableView.reloadData()
@@ -70,7 +68,7 @@ class ListViewController: BaseViewController {
     }
     
     private func setupUI() {
-        tableView.register(UsersTableViewCell.self, forCellReuseIdentifier: cellId)
+        tableView.register(UsersTableViewCell.self, forCellReuseIdentifier: viewModel.cellId)
         self.setupNavigationBar()
         let elements = [viewContainer, tableView]
         for element in elements {
@@ -80,7 +78,7 @@ class ListViewController: BaseViewController {
     }
     
     private func setupNavigationBar() {
-        self.navigationItem.title = "UsersList"
+        self.navigationItem.title = viewModel.title
     }
 }
 
@@ -99,7 +97,7 @@ extension ListViewController : UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! UsersTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: viewModel.cellId, for: indexPath) as! UsersTableViewCell
         guard let data = self.data else {return cell}
         cell.setupParametrs(items: data[indexPath.row])
         return cell

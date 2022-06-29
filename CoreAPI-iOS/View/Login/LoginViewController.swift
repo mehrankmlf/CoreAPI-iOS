@@ -10,7 +10,7 @@ import Combine
 
 class LoginViewController: BaseViewController {
     
-    private var viewModel : LoginViewModel?
+    private var viewModel : LoginViewModel!
     var subscriber = Set<AnyCancellable>()
     
     private lazy var viewContainer : UIView = {
