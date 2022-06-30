@@ -23,7 +23,7 @@
 		022E1F432853364500CF04F9 /* LoginViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022E1F422853364500CF04F9 /* LoginViewModelTest.swift */; };
 		022E1F4828534E9200CF04F9 /* MockServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022E1F4628534E9200CF04F9 /* MockServices.swift */; };
 		022E1F4A2853535600CF04F9 /* ListViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022E1F492853535600CF04F9 /* ListViewModelTest.swift */; };
-		029AA41228564F5C00CF5ABA /* CoreAPIEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029AA41128564F5C00CF5ABA /* CoreAPIEnums.swift */; };
+		029AA41228564F5C00CF5ABA /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029AA41128564F5C00CF5ABA /* Config.swift */; };
 		02F9D82B282CDE1C00E6D912 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F9D82A282CDE1C00E6D912 /* AppDelegate.swift */; };
 		02F9D82D282CDE1C00E6D912 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F9D82C282CDE1C00E6D912 /* SceneDelegate.swift */; };
 		02F9D834282CDE1D00E6D912 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02F9D833282CDE1D00E6D912 /* Assets.xcassets */; };
@@ -86,7 +86,7 @@
 		022E1F422853364500CF04F9 /* LoginViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelTest.swift; sourceTree = "<group>"; };
 		022E1F4628534E9200CF04F9 /* MockServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockServices.swift; sourceTree = "<group>"; };
 		022E1F492853535600CF04F9 /* ListViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModelTest.swift; sourceTree = "<group>"; };
-		029AA41128564F5C00CF5ABA /* CoreAPIEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreAPIEnums.swift; sourceTree = "<group>"; };
+		029AA41128564F5C00CF5ABA /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		02F9D827282CDE1C00E6D912 /* CoreAPI-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CoreAPI-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		02F9D82A282CDE1C00E6D912 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		02F9D82C282CDE1C00E6D912 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -314,7 +314,7 @@
 				02F9D860282CE15B00E6D912 /* CoreAPI.swift */,
 				02F9D862282CE17D00E6D912 /* TargerType.swift */,
 				02F9D864282CE19000E6D912 /* AlamofireLogger.swift */,
-				029AA41128564F5C00CF5ABA /* CoreAPIEnums.swift */,
+				029AA41128564F5C00CF5ABA /* Config.swift */,
 			);
 			path = "API Manager";
 			sourceTree = "<group>";
@@ -574,7 +574,7 @@
 				02F9D875282CE5C900E6D912 /* AFError + Extension.swift in Sources */,
 				0229E221282E5FAA00C343B5 /* UsersListResponse.swift in Sources */,
 				0228BA39282E185F00B7008F /* LoginViewController.swift in Sources */,
-				029AA41228564F5C00CF5ABA /* CoreAPIEnums.swift in Sources */,
+				029AA41228564F5C00CF5ABA /* Config.swift in Sources */,
 				02F9D873282CE54300E6D912 /* CoreAPI + Extension.swift in Sources */,
 				02F9D86E282CE46F00E6D912 /* Enums.swift in Sources */,
 				A848869C282F95D700FBCF0D /* BaseNavigationController.swift in Sources */,

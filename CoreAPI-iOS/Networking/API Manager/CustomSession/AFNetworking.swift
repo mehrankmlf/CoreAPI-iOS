@@ -19,7 +19,6 @@ class AFNetworking {
     
     let session: Session
     
-    /// init method for AlamofireNetworking
     ///
     /// - Parameter allHostsMustBeEvaluated: it configures certificate pinning behaviour
     /// if true: Alamofire will only allow communication with hosts defined in evaluators and matching defined Certificates.

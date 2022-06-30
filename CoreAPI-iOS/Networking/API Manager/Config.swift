@@ -15,7 +15,6 @@ enum BaseURLType {
     var desc : String {
         
         switch self {
-            
         case .baseApi :
             return "https://reqres.in"
         case .getMedia :

@@ -10,7 +10,7 @@ import Foundation
 /// struct for reading Certificates from files for Certificate Pinning
 struct Certificates {
     
-    /// assign .der file to this constant
+    /// assign .cer file to this constant
     static let cloudFlare: SecCertificate = Certificates.certificate(filename: "sni.cloudflaressl.com")
   
     /// Read certifice from file
