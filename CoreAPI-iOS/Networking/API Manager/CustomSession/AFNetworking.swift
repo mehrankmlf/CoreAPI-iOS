@@ -7,16 +7,10 @@
 
 import Alamofire
 
-protocol AFNetwrokingProtocol {
-    var session : Session { get }
-    init(allHostsMustBeEvaluated: Bool)
-}
-
-class AFNetworking : AFNetwrokingProtocol {
-    
+class AFNetworking {
     /// defined certificates for Certificate pinning
     private let certificates = [
-        "sni.cloudflaressl.com":
+        "reqres.in":
             PinnedCertificatesTrustEvaluator(certificates: [Certificates.cloudFlare],
                                              acceptSelfSignedCertificates: false,
                                              performDefaultValidation: true,
@@ -36,14 +30,6 @@ class AFNetworking : AFNetwrokingProtocol {
             allHostsMustBeEvaluated: allHostsMustBeEvaluated,
             evaluators: certificates
         )
-        
         session = Session(serverTrustManager: serverTrustPolicy, eventMonitors: [AlamofireLogger()])
     }
-//
-//    /// send certificate pinned request
-//    ///
-//    /// - Parameter convertible: request to send
-//    func request(_ convertible: URLRequestConvertible) -> DataRequest {
-//        return session.request(convertible)
-//    }
 }
