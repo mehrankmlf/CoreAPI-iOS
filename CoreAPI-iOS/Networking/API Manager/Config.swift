@@ -24,12 +24,12 @@ enum BaseURLType {
 }
 
 enum VersionType {
-    case empty
+    case none
     case v1, v2
     
     var desc : String {
         switch self {
-        case .empty :
+        case .none :
             return ""
         case .v1 :
             return "/v1"
