@@ -10,6 +10,11 @@ import Combine
 
 // MARK: BaseViewModel
 
+enum ViewModelStatus : Equatable {
+    case loadStart
+    case dismissAlert
+}
+
 protocol ViewModelBaseProtocol {
     var loadinState : CurrentValueSubject<ViewModelStatus, Never> { get set }
     var subscriber : Set<AnyCancellable> { get }

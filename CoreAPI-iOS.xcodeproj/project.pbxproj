@@ -10,6 +10,7 @@
 		02194FE52854F9B4002554C9 /* EndPointTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02194FE42854F9B4002554C9 /* EndPointTest.swift */; };
 		02194FE72854FA67002554C9 /* MockEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02194FE62854FA67002554C9 /* MockEndPoint.swift */; };
 		021C7E9C288322B600DE8456 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021C7E9B288322B600DE8456 /* APIError.swift */; };
+		021C7EA22883262000DE8456 /* MessageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021C7EA12883262000DE8456 /* MessageHelper.swift */; };
 		022146EE28563CC6003FB94B /* LoginViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022146ED28563CC6003FB94B /* LoginViewControllerTest.swift */; };
 		0228BA36282E12C000B7008F /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0228BA35282E12C000B7008F /* LoginViewModel.swift */; };
 		0228BA39282E185F00B7008F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0228BA38282E185F00B7008F /* LoginViewController.swift */; };
@@ -36,8 +37,6 @@
 		02F9D865282CE19000E6D912 /* AlamofireLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F9D864282CE19000E6D912 /* AlamofireLogger.swift */; };
 		02F9D868282CE1B400E6D912 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F9D867282CE1B400E6D912 /* Networking.swift */; };
 		02F9D86B282CE3EE00E6D912 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 02F9D86A282CE3EE00E6D912 /* Alamofire */; };
-		02F9D86E282CE46F00E6D912 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F9D86D282CE46F00E6D912 /* Enums.swift */; };
-		02F9D870282CE4B900E6D912 /* MessageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F9D86F282CE4B900E6D912 /* MessageHelper.swift */; };
 		02F9D873282CE54300E6D912 /* CoreAPI + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F9D872282CE54300E6D912 /* CoreAPI + Extension.swift */; };
 		02F9D875282CE5C900E6D912 /* AFError + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F9D874282CE5C900E6D912 /* AFError + Extension.swift */; };
 		02F9D878282CE68E00E6D912 /* BuildConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F9D877282CE68E00E6D912 /* BuildConfig.swift */; };
@@ -74,6 +73,7 @@
 		02194FE42854F9B4002554C9 /* EndPointTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointTest.swift; sourceTree = "<group>"; };
 		02194FE62854FA67002554C9 /* MockEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockEndPoint.swift; sourceTree = "<group>"; };
 		021C7E9B288322B600DE8456 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		021C7EA12883262000DE8456 /* MessageHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageHelper.swift; sourceTree = "<group>"; };
 		022146ED28563CC6003FB94B /* LoginViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerTest.swift; sourceTree = "<group>"; };
 		0228BA35282E12C000B7008F /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		0228BA38282E185F00B7008F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -103,8 +103,6 @@
 		02F9D862282CE17D00E6D912 /* TargerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargerType.swift; sourceTree = "<group>"; };
 		02F9D864282CE19000E6D912 /* AlamofireLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireLogger.swift; sourceTree = "<group>"; };
 		02F9D867282CE1B400E6D912 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
-		02F9D86D282CE46F00E6D912 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
-		02F9D86F282CE4B900E6D912 /* MessageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageHelper.swift; sourceTree = "<group>"; };
 		02F9D872282CE54300E6D912 /* CoreAPI + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreAPI + Extension.swift"; sourceTree = "<group>"; };
 		02F9D874282CE5C900E6D912 /* AFError + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AFError + Extension.swift"; sourceTree = "<group>"; };
 		02F9D877282CE68E00E6D912 /* BuildConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildConfig.swift; sourceTree = "<group>"; };
@@ -160,6 +158,22 @@
 				021C7E9B288322B600DE8456 /* APIError.swift */,
 			);
 			name = APIError;
+			sourceTree = "<group>";
+		};
+		021C7E9D2883258F00DE8456 /* CoreAPI + Extension */ = {
+			isa = PBXGroup;
+			children = (
+				02F9D872282CE54300E6D912 /* CoreAPI + Extension.swift */,
+			);
+			path = "CoreAPI + Extension";
+			sourceTree = "<group>";
+		};
+		021C7E9E288325B000DE8456 /* AFError + Extension */ = {
+			isa = PBXGroup;
+			children = (
+				02F9D874282CE5C900E6D912 /* AFError + Extension.swift */,
+			);
+			path = "AFError + Extension";
 			sourceTree = "<group>";
 		};
 		022146EC28563CAC003FB94B /* ViewController */ = {
@@ -313,6 +327,8 @@
 			children = (
 				02F9D85E282CE11700E6D912 /* API Manager */,
 				02F9D85F282CE12F00E6D912 /* EndPoint */,
+				021C7E9D2883258F00DE8456 /* CoreAPI + Extension */,
+				021C7E9E288325B000DE8456 /* AFError + Extension */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -346,8 +362,7 @@
 				0229E222282E64DD00C343B5 /* ViewComponents */,
 				02F9D879282CE6B100E6D912 /* Protocols */,
 				02F9D871282CE52200E6D912 /* Extension */,
-				02F9D86D282CE46F00E6D912 /* Enums.swift */,
-				02F9D86F282CE4B900E6D912 /* MessageHelper.swift */,
+				021C7EA12883262000DE8456 /* MessageHelper.swift */,
 				02F9D877282CE68E00E6D912 /* BuildConfig.swift */,
 			);
 			path = Classes;
@@ -356,8 +371,6 @@
 		02F9D871282CE52200E6D912 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				02F9D872282CE54300E6D912 /* CoreAPI + Extension.swift */,
-				02F9D874282CE5C900E6D912 /* AFError + Extension.swift */,
 				0229E219282E5E4A00C343B5 /* String + Extension.swift */,
 			);
 			path = Extension;
@@ -563,7 +576,6 @@
 			files = (
 				0229E21F282E5F9D00C343B5 /* UsersListRequest.swift in Sources */,
 				02F9D865282CE19000E6D912 /* AlamofireLogger.swift in Sources */,
-				02F9D870282CE4B900E6D912 /* MessageHelper.swift in Sources */,
 				02F9D87E282D075B00E6D912 /* LoginRequest.swift in Sources */,
 				0228BA36282E12C000B7008F /* LoginViewModel.swift in Sources */,
 				A89C227A2830D4EC00B3AD2D /* BaseViewController.swift in Sources */,
@@ -581,6 +593,7 @@
 				A8DE22B6282F691E006784E4 /* BaseResponse.swift in Sources */,
 				02F9D861282CE15B00E6D912 /* CoreAPI.swift in Sources */,
 				A82CBF53286C30950036FD42 /* Certificates.swift in Sources */,
+				021C7EA22883262000DE8456 /* MessageHelper.swift in Sources */,
 				A89C22782830CCDD00B3AD2D /* ViewModelBaseProtocol.swift in Sources */,
 				02F9D875282CE5C900E6D912 /* AFError + Extension.swift in Sources */,
 				0229E221282E5FAA00C343B5 /* UsersListResponse.swift in Sources */,
@@ -588,7 +601,6 @@
 				0228BA39282E185F00B7008F /* LoginViewController.swift in Sources */,
 				029AA41228564F5C00CF5ABA /* Config.swift in Sources */,
 				02F9D873282CE54300E6D912 /* CoreAPI + Extension.swift in Sources */,
-				02F9D86E282CE46F00E6D912 /* Enums.swift in Sources */,
 				A848869C282F95D700FBCF0D /* BaseNavigationController.swift in Sources */,
 				02F9D868282CE1B400E6D912 /* Networking.swift in Sources */,
 			);
