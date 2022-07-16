@@ -1,6 +1,6 @@
 # CoreAPI-iOS
 
-This project Contains Alamofire Network layer Based on Protocol Oriented Concept and Combine Framework.
+This project Contains Alamofire Network layer Based on Protocol Oriented Concept and Combine Framework + The concept of Promises and Futures.
 
 It is created with UIKit, Alamofire, Combine.
 
