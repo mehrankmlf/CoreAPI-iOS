@@ -36,10 +36,10 @@ enum Task {
 protocol TargetType {
     
     /// The target's base `URL`.
-    var baseURL: String { get }
+    var baseURL: BaseURLType { get }
     
     /// The Version of EndPoints
-    var version : String { get }
+    var version : VersionType { get }
     
     /// The path to be appended to `baseURL` to form the full `URL`.
     var path: RequestType { get }

@@ -10,14 +10,14 @@ import Foundation
 enum BaseURLType {
     
     case baseApi
-    case getMedia
+    case staging
     
     var desc : String {
         
         switch self {
         case .baseApi :
             return "https://reqres.in"
-        case .getMedia :
+        case .staging :
             return "https://reqres.in/"
         }
     }

@@ -34,7 +34,7 @@ class BaseAPI<T: TargetType> {
         let headers = Alamofire.HTTPHeaders(target.headers ?? [:])
         let params = buildParameters(task: target.task)
         let targetPath = buildTarget(target: target.path)
-        let url = (target.baseURL + target.version + targetPath)
+        let url = (target.baseURL.desc + target.version.desc + targetPath)
         
         return FutureResult<M> { [weak self] promise in
             

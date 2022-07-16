@@ -13,8 +13,8 @@ import Combine
 // App Configuration Base
 protocol AppConfiguration {
     
-    var baseURL : String { get }
-    var version : String { get }
+    var baseURL : BaseURLType { get }
+    var version : VersionType { get }
     
     func isVPNConnected() -> Bool
     func isJailBrokenDevice() -> Bool

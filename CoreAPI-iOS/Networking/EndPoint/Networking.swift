@@ -14,15 +14,14 @@ enum Networking {
 }
 
 extension Networking : TargetType {
-    
-    var baseURL: String {
-        return BuildConfig.setAppState.baseURL
+    var baseURL: BaseURLType {
+        return .baseApi
     }
     
-    var version: String {
-        return BuildConfig.setAppState.version
+    var version: VersionType {
+        return.none
     }
-    
+
     var path: RequestType {
         switch self {
         case .login:
