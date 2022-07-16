@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		02194FE52854F9B4002554C9 /* EndPointTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02194FE42854F9B4002554C9 /* EndPointTest.swift */; };
 		02194FE72854FA67002554C9 /* MockEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02194FE62854FA67002554C9 /* MockEndPoint.swift */; };
+		021C7E9C288322B600DE8456 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021C7E9B288322B600DE8456 /* APIError.swift */; };
 		022146EE28563CC6003FB94B /* LoginViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022146ED28563CC6003FB94B /* LoginViewControllerTest.swift */; };
 		0228BA36282E12C000B7008F /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0228BA35282E12C000B7008F /* LoginViewModel.swift */; };
 		0228BA39282E185F00B7008F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0228BA38282E185F00B7008F /* LoginViewController.swift */; };
@@ -72,6 +73,7 @@
 /* Begin PBXFileReference section */
 		02194FE42854F9B4002554C9 /* EndPointTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointTest.swift; sourceTree = "<group>"; };
 		02194FE62854FA67002554C9 /* MockEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockEndPoint.swift; sourceTree = "<group>"; };
+		021C7E9B288322B600DE8456 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		022146ED28563CC6003FB94B /* LoginViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerTest.swift; sourceTree = "<group>"; };
 		0228BA35282E12C000B7008F /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		0228BA38282E185F00B7008F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -150,6 +152,14 @@
 				02194FE42854F9B4002554C9 /* EndPointTest.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		021C7E9A288322A100DE8456 /* APIError */ = {
+			isa = PBXGroup;
+			children = (
+				021C7E9B288322B600DE8456 /* APIError.swift */,
+			);
+			name = APIError;
 			sourceTree = "<group>";
 		};
 		022146EC28563CAC003FB94B /* ViewController */ = {
@@ -310,6 +320,7 @@
 		02F9D85E282CE11700E6D912 /* API Manager */ = {
 			isa = PBXGroup;
 			children = (
+				021C7E9A288322A100DE8456 /* APIError */,
 				A82CBF4F286C2F660036FD42 /* CustomSession */,
 				02F9D860282CE15B00E6D912 /* CoreAPI.swift */,
 				02F9D862282CE17D00E6D912 /* TargerType.swift */,
@@ -573,6 +584,7 @@
 				A89C22782830CCDD00B3AD2D /* ViewModelBaseProtocol.swift in Sources */,
 				02F9D875282CE5C900E6D912 /* AFError + Extension.swift in Sources */,
 				0229E221282E5FAA00C343B5 /* UsersListResponse.swift in Sources */,
+				021C7E9C288322B600DE8456 /* APIError.swift in Sources */,
 				0228BA39282E185F00B7008F /* LoginViewController.swift in Sources */,
 				029AA41228564F5C00CF5ABA /* Config.swift in Sources */,
 				02F9D873282CE54300E6D912 /* CoreAPI + Extension.swift in Sources */,
