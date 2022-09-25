@@ -17,7 +17,6 @@
 		0229E217282E5DC300C343B5 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0229E216282E5DC300C343B5 /* ListViewController.swift */; };
 		0229E21A282E5E4A00C343B5 /* String + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0229E219282E5E4A00C343B5 /* String + Extension.swift */; };
 		0229E21C282E5F1600C343B5 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0229E21B282E5F1600C343B5 /* ListViewModel.swift */; };
-		0229E21F282E5F9D00C343B5 /* UsersListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0229E21E282E5F9D00C343B5 /* UsersListRequest.swift */; };
 		0229E221282E5FAA00C343B5 /* UsersListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0229E220282E5FAA00C343B5 /* UsersListResponse.swift */; };
 		0229E225282E651700C343B5 /* UsersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0229E223282E651700C343B5 /* UsersTableViewCell.swift */; };
 		022E1F3E2853315C00CF04F9 /* LoginResponseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022E1F3D2853315C00CF04F9 /* LoginResponseTest.swift */; };
@@ -25,7 +24,9 @@
 		022E1F432853364500CF04F9 /* LoginViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022E1F422853364500CF04F9 /* LoginViewModelTest.swift */; };
 		022E1F4828534E9200CF04F9 /* MockServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022E1F4628534E9200CF04F9 /* MockServices.swift */; };
 		022E1F4A2853535600CF04F9 /* ListViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022E1F492853535600CF04F9 /* ListViewModelTest.swift */; };
-		029AA41228564F5C00CF5ABA /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029AA41128564F5C00CF5ABA /* Config.swift */; };
+		0263321E28E0801A002EC410 /* LoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0263321D28E0801A002EC410 /* LoginUseCase.swift */; };
+		0263322028E08071002EC410 /* ListUseCasae.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0263321F28E08071002EC410 /* ListUseCasae.swift */; };
+		029AA41228564F5C00CF5ABA /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029AA41128564F5C00CF5ABA /* Configuration.swift */; };
 		02F9D82B282CDE1C00E6D912 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F9D82A282CDE1C00E6D912 /* AppDelegate.swift */; };
 		02F9D82D282CDE1C00E6D912 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F9D82C282CDE1C00E6D912 /* SceneDelegate.swift */; };
 		02F9D834282CDE1D00E6D912 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02F9D833282CDE1D00E6D912 /* Assets.xcassets */; };
@@ -41,7 +42,6 @@
 		02F9D875282CE5C900E6D912 /* AFError + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F9D874282CE5C900E6D912 /* AFError + Extension.swift */; };
 		02F9D878282CE68E00E6D912 /* BuildConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F9D877282CE68E00E6D912 /* BuildConfig.swift */; };
 		02F9D87B282CE6C500E6D912 /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F9D87A282CE6C500E6D912 /* AppConfiguration.swift */; };
-		02F9D87E282D075B00E6D912 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F9D87D282D075B00E6D912 /* LoginRequest.swift */; };
 		02F9D880282D076A00E6D912 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F9D87F282D076A00E6D912 /* LoginResponse.swift */; };
 		A82CBF4E286C2EE00036FD42 /* sni.cloudflaressl.com.cer in Resources */ = {isa = PBXBuildFile; fileRef = A82CBF4D286C2EE00036FD42 /* sni.cloudflaressl.com.cer */; };
 		A82CBF51286C2F750036FD42 /* AFNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82CBF50286C2F750036FD42 /* AFNetworking.swift */; };
@@ -80,7 +80,6 @@
 		0229E216282E5DC300C343B5 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		0229E219282E5E4A00C343B5 /* String + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + Extension.swift"; sourceTree = "<group>"; };
 		0229E21B282E5F1600C343B5 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
-		0229E21E282E5F9D00C343B5 /* UsersListRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListRequest.swift; sourceTree = "<group>"; };
 		0229E220282E5FAA00C343B5 /* UsersListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListResponse.swift; sourceTree = "<group>"; };
 		0229E223282E651700C343B5 /* UsersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTableViewCell.swift; sourceTree = "<group>"; };
 		022E1F3D2853315C00CF04F9 /* LoginResponseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponseTest.swift; sourceTree = "<group>"; };
@@ -88,7 +87,9 @@
 		022E1F422853364500CF04F9 /* LoginViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelTest.swift; sourceTree = "<group>"; };
 		022E1F4628534E9200CF04F9 /* MockServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockServices.swift; sourceTree = "<group>"; };
 		022E1F492853535600CF04F9 /* ListViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModelTest.swift; sourceTree = "<group>"; };
-		029AA41128564F5C00CF5ABA /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		0263321D28E0801A002EC410 /* LoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCase.swift; sourceTree = "<group>"; };
+		0263321F28E08071002EC410 /* ListUseCasae.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListUseCasae.swift; sourceTree = "<group>"; };
+		029AA41128564F5C00CF5ABA /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		02F9D827282CDE1C00E6D912 /* CoreAPI-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CoreAPI-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		02F9D82A282CDE1C00E6D912 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		02F9D82C282CDE1C00E6D912 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -107,7 +108,6 @@
 		02F9D874282CE5C900E6D912 /* AFError + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AFError + Extension.swift"; sourceTree = "<group>"; };
 		02F9D877282CE68E00E6D912 /* BuildConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildConfig.swift; sourceTree = "<group>"; };
 		02F9D87A282CE6C500E6D912 /* AppConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfiguration.swift; sourceTree = "<group>"; };
-		02F9D87D282D075B00E6D912 /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 		02F9D87F282D076A00E6D912 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		A82CBF4D286C2EE00036FD42 /* sni.cloudflaressl.com.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = sni.cloudflaressl.com.cer; sourceTree = "<group>"; };
 		A82CBF50286C2F750036FD42 /* AFNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AFNetworking.swift; sourceTree = "<group>"; };
@@ -202,13 +202,12 @@
 			path = List;
 			sourceTree = "<group>";
 		};
-		0229E21D282E5F7E00C343B5 /* ListUsecase */ = {
+		0229E21D282E5F7E00C343B5 /* ListResponse */ = {
 			isa = PBXGroup;
 			children = (
-				0229E21E282E5F9D00C343B5 /* UsersListRequest.swift */,
 				0229E220282E5FAA00C343B5 /* UsersListResponse.swift */,
 			);
-			path = ListUsecase;
+			path = ListResponse;
 			sourceTree = "<group>";
 		};
 		0229E222282E64DD00C343B5 /* ViewComponents */ = {
@@ -246,6 +245,25 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		0263321B28E07F39002EC410 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				02F9D860282CE15B00E6D912 /* CoreAPI.swift */,
+				02F9D862282CE17D00E6D912 /* TargerType.swift */,
+				029AA41128564F5C00CF5ABA /* Configuration.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		0263321C28E07FFB002EC410 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				0263321D28E0801A002EC410 /* LoginUseCase.swift */,
+				0263321F28E08071002EC410 /* ListUseCasae.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
 		02F9D81E282CDE1C00E6D912 = {
 			isa = PBXGroup;
 			children = (
@@ -271,6 +289,7 @@
 			children = (
 				02F9D86C282CE45F00E6D912 /* Classes */,
 				02F9D85D282CE10E00E6D912 /* Networking */,
+				0263321C28E07FFB002EC410 /* UseCases */,
 				02F9D85C282CE10700E6D912 /* Model */,
 				02F9D85B282CE10300E6D912 /* View */,
 				02F9D82A282CDE1C00E6D912 /* AppDelegate.swift */,
@@ -316,8 +335,8 @@
 			isa = PBXGroup;
 			children = (
 				A8DE22B4282F6904006784E4 /* BaseResponse */,
-				02F9D87C282D073800E6D912 /* LoginUseCase */,
-				0229E21D282E5F7E00C343B5 /* ListUsecase */,
+				02F9D87C282D073800E6D912 /* LoginResponse */,
+				0229E21D282E5F7E00C343B5 /* ListResponse */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -336,12 +355,10 @@
 		02F9D85E282CE11700E6D912 /* API Manager */ = {
 			isa = PBXGroup;
 			children = (
+				0263321B28E07F39002EC410 /* Service */,
 				021C7E9A288322A100DE8456 /* APIError */,
 				A82CBF4F286C2F660036FD42 /* CustomSession */,
-				02F9D860282CE15B00E6D912 /* CoreAPI.swift */,
-				02F9D862282CE17D00E6D912 /* TargerType.swift */,
 				02F9D864282CE19000E6D912 /* AlamofireLogger.swift */,
-				029AA41128564F5C00CF5ABA /* Config.swift */,
 			);
 			path = "API Manager";
 			sourceTree = "<group>";
@@ -385,13 +402,12 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
-		02F9D87C282D073800E6D912 /* LoginUseCase */ = {
+		02F9D87C282D073800E6D912 /* LoginResponse */ = {
 			isa = PBXGroup;
 			children = (
-				02F9D87D282D075B00E6D912 /* LoginRequest.swift */,
 				02F9D87F282D076A00E6D912 /* LoginResponse.swift */,
 			);
-			path = LoginUseCase;
+			path = LoginResponse;
 			sourceTree = "<group>";
 		};
 		A82CBF4C286C2EBB0036FD42 /* Certificate */ = {
@@ -574,9 +590,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0229E21F282E5F9D00C343B5 /* UsersListRequest.swift in Sources */,
 				02F9D865282CE19000E6D912 /* AlamofireLogger.swift in Sources */,
-				02F9D87E282D075B00E6D912 /* LoginRequest.swift in Sources */,
 				0228BA36282E12C000B7008F /* LoginViewModel.swift in Sources */,
 				A89C227A2830D4EC00B3AD2D /* BaseViewController.swift in Sources */,
 				02F9D880282D076A00E6D912 /* LoginResponse.swift in Sources */,
@@ -596,13 +610,15 @@
 				021C7EA22883262000DE8456 /* MessageHelper.swift in Sources */,
 				A89C22782830CCDD00B3AD2D /* ViewModelBaseProtocol.swift in Sources */,
 				02F9D875282CE5C900E6D912 /* AFError + Extension.swift in Sources */,
+				0263322028E08071002EC410 /* ListUseCasae.swift in Sources */,
 				0229E221282E5FAA00C343B5 /* UsersListResponse.swift in Sources */,
 				021C7E9C288322B600DE8456 /* APIError.swift in Sources */,
 				0228BA39282E185F00B7008F /* LoginViewController.swift in Sources */,
-				029AA41228564F5C00CF5ABA /* Config.swift in Sources */,
+				029AA41228564F5C00CF5ABA /* Configuration.swift in Sources */,
 				02F9D873282CE54300E6D912 /* CoreAPI + Extension.swift in Sources */,
 				A848869C282F95D700FBCF0D /* BaseNavigationController.swift in Sources */,
 				02F9D868282CE1B400E6D912 /* Networking.swift in Sources */,
+				0263321E28E0801A002EC410 /* LoginUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

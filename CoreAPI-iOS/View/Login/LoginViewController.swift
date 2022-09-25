@@ -8,7 +8,7 @@
 import UIKit
 import Combine
 
-class LoginViewController: BaseViewController {
+final class LoginViewController: BaseViewController {
     
     private var viewModel : LoginViewModel!
     var subscriber = Set<AnyCancellable>()

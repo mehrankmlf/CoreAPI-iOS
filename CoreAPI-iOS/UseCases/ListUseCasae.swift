@@ -1,8 +1,8 @@
 //
-//  ListRequest.swift
+//  ListUseCasae.swift
 //  CoreAPI-iOS
 //
-//  Created by Mehran on 2/23/1401 AP.
+//  Created by Mehran on 7/3/1401 AP.
 //
 
 import Foundation
@@ -17,4 +17,3 @@ class UserListRequest : BaseAPI<Networking>, UsersListProtocol {
         self.fetchData(target: .users, responseClass: BaseResponse<[UsersListResponse]>.self)
     }
 }
-

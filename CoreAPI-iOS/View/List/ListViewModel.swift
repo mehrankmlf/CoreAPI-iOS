@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-class ListViewModel : ObservableObject, listViewModel {
+final class ListViewModel : ObservableObject, listViewModel {
     
     let cellId = "cellId"
     let title = "UsersList"

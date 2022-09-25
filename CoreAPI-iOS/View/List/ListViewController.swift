@@ -8,7 +8,7 @@
 import UIKit
 import Combine
 
-class ListViewController: BaseViewController {
+final class ListViewController: BaseViewController {
 
     private var viewModel : ListViewModel!
     private(set) var data : [UsersListResponse]? {

@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-class LoginViewModel : ObservableObject, loginViewModel {
+final class LoginViewModel : ObservableObject, loginViewModel {
     
     private var getTokenData: LoginServiceProtocol
     

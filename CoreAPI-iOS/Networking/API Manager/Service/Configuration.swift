@@ -1,5 +1,5 @@
 //
-//  CoreAPIEnums.swift
+//  Configuration.swift
 //  CoreAPI-iOS
 //
 //  Created by Mehran on 3/22/1401 AP.
