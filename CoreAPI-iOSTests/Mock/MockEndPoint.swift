@@ -10,9 +10,8 @@ import Foundation
 @testable import CoreAPI_iOS
 
 class  MockEndPoint : TargetType {
-    
-    var baseURL: String = "www.testUrl.com"
-    var version: String = "v1"
+    var baseURL: BaseURLType = .baseApi
+    var version: VersionType = .v1
     var path: RequestType = .requestPath(path: "test")
     var method: HTTPMethod = .post
     var task: Task = .requestParameters(parameters: ["test" : 1], encoding: .default)

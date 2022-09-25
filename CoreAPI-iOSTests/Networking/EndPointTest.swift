@@ -24,19 +24,19 @@ class EndPointTest: XCTestCase {
     }
     
     func testTargetType_WhenBaseURl_ShouldReturnString() {
-        XCTAssertTrue(endPoint.baseURL as Any is String)
+        XCTAssertTrue(endPoint.baseURL.desc as Any is String)
     }
     
     func testTargetType_WhenBaseURl_ShouldReturnURL() {
-        XCTAssertEqual(endPoint.baseURL, "www.testUrl.com")
+        XCTAssertEqual(endPoint.baseURL.desc, "https://reqres.in")
     }
     
     func testTargetType_WhenVersion_ShouldReturnString() {
-        XCTAssertTrue(endPoint.version as Any is String)
+        XCTAssertTrue(endPoint.version.desc as Any is String)
     }
     
     func testTargetType_WhenVersion_ShouldReturnVersion() {
-        XCTAssertEqual(endPoint.version, "v1")
+        XCTAssertEqual(endPoint.version.desc, "/v1")
     }
     
     func testTargetType_WhenPath_ShouldBeRequestType() {
