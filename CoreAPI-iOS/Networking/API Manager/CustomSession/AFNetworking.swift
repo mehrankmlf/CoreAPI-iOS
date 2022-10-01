@@ -7,7 +7,7 @@
 
 import Alamofire
 
-class AFNetworking {
+final class AFNetworking {
     /// defined certificates for Certificate pinning
     private let certificates = [
         "reqres.in":
