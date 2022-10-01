@@ -90,24 +90,12 @@ final class LoginViewController: BaseViewController {
 }
 
 extension LoginViewController {
+    
     private func pushToListViewController() {
         let vc = ListViewController(viewModel: ListViewModel())
         navigationController?.pushViewController(vc, animated: true)
     }
-}
-
-extension LoginViewController {
-    private func handleActivityIndicator(state : ViewModelStatus) {
-        switch state {
-        case .loadStart:
-            self.showActivityIndicator(uiView: view)
-        case .dismissAlert:
-            self.hideActivityIndicator(uiView: view)
-        }
-    }
-}
-
-extension LoginViewController {
+    
     private func setupAutoLayout() {
         viewContainer.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
         viewContainer.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor).isActive = true

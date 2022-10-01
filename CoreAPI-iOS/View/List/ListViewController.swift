@@ -105,17 +105,6 @@ extension ListViewController : UITableViewDelegate, UITableViewDataSource {
 }
 
 extension ListViewController {
-    private func handleActivityIndicator(state : ViewModelStatus) {
-        switch state {
-        case .loadStart:
-            self.showActivityIndicator(uiView: view)
-        case .dismissAlert:
-            self.hideActivityIndicator(uiView: view)
-        }
-    }
-}
-
-extension ListViewController {
     private func setupAutoLayout() {
         viewContainer.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
         viewContainer.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor).isActive = true
