@@ -24,6 +24,11 @@ You don't need to install Anything manually, Alamofire will install  Automatical
 ## Libraries
 - Alamofire
 
+## Usage
+I have explained about Core-API in the form of a post on Medium.
+
+https://medium.com/@mehran.kmlf/alamofire-network-layer-combine-ee0f10d00ca3
+
 ## Contribution
 If you have anything to upgrade this project, feel free to contact me via email: `mehran.kmlf@icloud.com`.
 
